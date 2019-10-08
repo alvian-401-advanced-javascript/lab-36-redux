@@ -1,6 +1,5 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, combineReducers } from 'redux';
 
-import reporter from './middleware/reporter.js';
 import appReducer from './app-reducers.js';
 import numbersReducer from './numbers-reducer.js';
 
@@ -9,5 +8,5 @@ let reducers = combineReducers({
   numbers: numbersReducer
 });
 
-export default () => createStore(reducers, applyMiddleware(reporter));
+export default () => createStore(reducers,);
 
